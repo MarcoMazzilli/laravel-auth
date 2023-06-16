@@ -15,8 +15,8 @@
             <span>Projects</span>
         </a>
     </li>
-    <li class="{{ Route::currentRouteName() === '#' ? 'active' : '' }}">
-        <a href="#">
+    <li class="{{ Route::currentRouteName() === 'admin.project.create' ? 'active' : '' }}">
+        <a href="{{ route('admin.project.create')}}">
 
             <i class="fa-solid fa-circle-plus"></i>
             <span>Create New</span>

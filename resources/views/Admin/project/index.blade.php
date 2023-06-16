@@ -14,7 +14,7 @@
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">project_name</th>
-                <th scope="col">thumb</th>
+                <th scope="col">Url</th>
                 <th scope="col">status</th>
                 <th scope="col">license</th>
                 <th scope="col">cta</th>
@@ -26,7 +26,7 @@
             <tr>
                 <th scope="row">{{ $project->id }}</th>
                 <td>{{ $project->project_name }}</td>
-                <td>{{ $project->thumb }}</td>
+                <td>{{ $project->url }}</td>
                 <td>{{ $project->status }}</td>
                 <td>{{ $project->license }}</td>
                 <td>

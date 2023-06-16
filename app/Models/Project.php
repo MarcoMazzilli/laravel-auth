@@ -24,4 +24,14 @@ class Project extends Model
         }
         return $slug;
     }
+
+    protected $fillable = [
+        'project_name',
+        'url',
+        'description',
+        'slug',
+        'status',
+        'license',
+        'thumb'
+    ];
 }
