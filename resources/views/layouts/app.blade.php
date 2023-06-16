@@ -14,6 +14,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
@@ -25,8 +26,12 @@
 
         @include('admin.partials.header')
 
-        <main class="">
+        <main class="d-flex">
+
+            @include('admin.partials.aside')
+
             @yield('content')
+
         </main>
     </div>
 </body>

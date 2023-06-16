@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container-fluid">
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="logo">
-                <img src="/assets/Facebook_icon.png" alt="no image">
+                <img src="/assets/mvm-avatar.png" alt="no image">
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
