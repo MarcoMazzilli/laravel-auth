@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -14,7 +15,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('admin.project.index');
+        $projects = Project::paginate(25);
+        return view('admin.project.index', compact('projects'));
     }
 
     /**

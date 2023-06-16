@@ -20,9 +20,9 @@ class ProjectsTableSeeder extends Seeder
 
             $new_project = new Project();
 
-            $new_project->project_name = $faker->sentence();
+            $new_project->project_name = str_replace('.','',$faker->sentence());
             $new_project->description = $faker->text();
-            $new_project->thumb = $new_project->project_name . '.png';
+            $new_project->thumb = str_replace(' ','',$new_project->project_name) . ".png";
             $new_project->slug = Project::generateSlug($new_project->project_name);
             $new_project->status = 'In corso';
             $new_project->license = 'MIT';
