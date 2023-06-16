@@ -31,7 +31,7 @@
                 <td>{{ $project->license }}</td>
                 <td>
                     <a href="#" class="btn btn-success">View</a>
-                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-warning text-white">Edit</a>
                     <a href="#" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
