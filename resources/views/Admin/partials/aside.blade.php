@@ -3,13 +3,13 @@
 <ul>
 
     <li>
-        <a href="#">
+        <a href="{{ route('admin.home') }}">
             <i class="fa-solid fa-chart-pie"></i>
             <span>Dashboard</span>
         </a>
     </li>
     <li>
-        <a href="#">
+        <a href="{{ route('admin.project.index')}}">
 
             <i class="fa-solid fa-diagram-project"></i>
             <span>Projects</span>
