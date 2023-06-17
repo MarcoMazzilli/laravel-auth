@@ -24,7 +24,8 @@
                     class="form-control @error('project_name') is-invalid @enderror"
                     id="project_name"
                     name="project_name"
-                    placeholder="Insert project's name">
+                    placeholder="Insert project's name"
+                    value="{{old('project_name')}}">
             </div>
 
             <div class="mb-3">
@@ -34,7 +35,8 @@
                     class="form-control @error('url') is-invalid @enderror"
                     id="url"
                     name="url"
-                    placeholder="Insert project's url">
+                    placeholder="Insert project's url"
+                    value="{{old('url')}}">
             </div>
 
             <div class="mb-3 d-flex flex-column">
@@ -45,9 +47,14 @@
                     class="form-control @error('description') is-invalid @enderror"
                     cols="30"
                     rows="5"
-                    placeholder="Insert project's description">
-                </textarea>
+                    placeholder="Insert project's description">{{old('description')}}</textarea>
             </div>
+
+            @if ($errors->any())
+                <div class="alert alert-warning">
+                    <p>Ricompila "Stato" e "Licenza"</p>
+                </div>
+            @endif
 
             <div class="mb-3 w-25">
                 <label for="status" class="form-label">Status</label>
