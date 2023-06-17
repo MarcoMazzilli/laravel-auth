@@ -29,7 +29,9 @@
 
         <main class="d-flex">
 
+            @auth
             @include('admin.partials.aside')
+            @endauth
 
             @yield('content')
 
