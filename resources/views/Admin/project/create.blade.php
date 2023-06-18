@@ -90,8 +90,10 @@
             </div>
 
 
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="cta text-end py-3">
+                <a href="{{ route('admin.project.index') }}" class="btn btn-danger">Back to home</a>
+                <button type="submit" class="btn btn-primary">Create New</button>
+            </div>
 
         </form>
     </div>

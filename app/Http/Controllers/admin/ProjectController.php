@@ -67,9 +67,10 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        //
+        // $project = Project::find($id);
+        return view('admin.project.edit', compact('project'));
     }
 
     /**
@@ -79,9 +80,13 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProjectRequest $request, Project $project)
     {
-        //
+        $form_data = $request->all();
+
+        $project->update($form_data);
+
+        return redirect()->route('admin.project.show',compact('project'));
     }
 
     /**

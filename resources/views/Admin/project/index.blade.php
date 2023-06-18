@@ -7,6 +7,9 @@
         <div>
             {{ $projects->links() }}
         </div>
+        <div>
+            <a class="btn btn-primary mx-3" href="{{ route('admin.project.create')}}"><i class="fa-solid fa-plus"></i></a>
+        </div>
     </div>
 
     <table class="table">
@@ -31,8 +34,10 @@
                 <td>{{ $project->license }}</td>
                 <td>
                     <a href="{{ route('admin.project.show', $project) }}" class="btn btn-success">View</a>
-                    <a href="#" class="btn btn-warning text-white">Edit</a>
+                    <a href="{{ route('admin.project.edit', $project) }}" class="btn btn-warning text-white">Edit</a>
+                    {{-- form --}}
                     <a href="#" class="btn btn-danger">Delete</a>
+                    {{-- form --}}
                 </td>
             </tr>
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container show p-5">
+    <div class="container show p-5 overflow-auto">
 
         <div class="card">
             <div class="card-body">
@@ -32,8 +32,8 @@
         </div>
 
         <div class="cta text-end py-3">
-            <a href="#" class="btn btn-danger">Edit</a>
-            <a href="{{ route('admin.project.index') }}" class="btn btn-primary">Back to view</a>
+            <a href="{{ route('admin.project.edit', $project) }}" class="btn btn-warning text-white">Edit</a>
+            <a href="{{ route('admin.project.index') }}" class="btn btn-success">Back to view</a>
         </div>
 
     </div>
