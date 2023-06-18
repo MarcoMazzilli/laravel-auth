@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('project_name');
             $table->string('url');
             $table->text('description');
-            $table->string('thumb')->nullable();
+            $table->string('thumb')->nullable()->default('no_image_available.jpeg');
             $table->string('slug');
             $table->string('status');
             $table->string('license');

@@ -1,0 +1,40 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container show p-5">
+
+        <div class="card">
+            <div class="card-body">
+
+                <label class="fw-bold" for="name">Project name</label>
+                <p id="name">{{ $project->project_name }}</p>
+
+                <label class="fw-bold" for="description">Description</label>
+                <p  id="description"> {{ $project->description}}</p>
+
+                <label class="fw-bold" for="url">Url</label>
+                <p>
+                    <a class="d-block" id="url" target="_blank">{{ $project->url }}</a>
+                </p>
+
+                <label class="fw-bold" for="status">Status</label>
+                <p id="status">{{ $project->status }}</p>
+
+                <label class="fw-bold" for="license">License</label>
+                <p id="license">{{ $project->license }}</p>
+
+                <p class="card-text"><small class="text-body-secondary">Last Update {{ $project->updated_at }} </small></p>
+
+            </div>
+
+                <img src="{{ Vite::asset('resources/assets/img/no_image_available.jpeg')}}" class="card-img-bottom image-show" alt="No Image available">
+
+        </div>
+
+        <div class="cta text-end py-3">
+            <a href="#" class="btn btn-danger">Edit</a>
+            <a href="{{ route('admin.project.index') }}" class="btn btn-primary">Back to view</a>
+        </div>
+
+    </div>
+@endsection

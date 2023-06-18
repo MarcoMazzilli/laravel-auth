@@ -41,7 +41,6 @@ class ProjectController extends Controller
         $form_data = $request->all();
 
         $form_data['slug'] = Project::generateSlug($form_data['project_name']);
-        $form_data['thumb'] = str_replace(' ','',$form_data['project_name']) . ".png";
 
         $new_project = new Project();
         $new_project->fill($form_data);
@@ -58,7 +57,8 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::find($id);
+        return view('admin.project.show' , compact('project'));
     }
 
     /**

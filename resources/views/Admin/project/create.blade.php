@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid p-5 overflow-auto">
-        <h1>Create new project</h1>
+        <h1 class="mb-3">Create new project</h1>
 
         @if ($errors->any())
             <ul class="alert alert-danger" role="alert">
@@ -37,6 +37,17 @@
                     name="url"
                     placeholder="Insert project's url"
                     value="{{old('url')}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="thumb" class="form-label">Path image</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="thumb"
+                    name="thumb"
+                    placeholder="Insert project's thumb"
+                    value="{{old('thumb')}}">
             </div>
 
             <div class="mb-3 d-flex flex-column">
