@@ -39,13 +39,19 @@
                     value="{{old('url')}}">
             </div>
 
-            <div class="mb-3">
-                <label for="thumb" class="form-label">Select a photo</label>
-                <input
+            <div class="row mb-3">
+                <div class=" col-7">
+                    <label for="image_path" class="form-label">Select a photo</label>
+                    <input
                     type="file"
+                    onchange="showImage()"
                     class="form-control"
-                    id="thumb"
-                    name="thumb">
+                    id="image_path"
+                    name="image_path">
+                </div>
+                <div class="col-5">
+                    <img id="prev-image" width="150" src="" alt="">
+                </div>
             </div>
 
             <div class="mb-3 d-flex flex-column">
@@ -95,4 +101,14 @@
 
         </form>
     </div>
+
+    <script>
+        function showImage(){
+
+        const tagImage   = document.getElementById('prev-image');
+        tagImage.src     = URL.createObjectURL(event.target.files[0]);
+
+        }
+    </script>
+
 @endsection

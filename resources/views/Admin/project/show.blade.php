@@ -23,11 +23,18 @@
                 <label class="fw-bold" for="license">License</label>
                 <p id="license">{{ $project->license }}</p>
 
+                <label class="fw-bold" for="license">Img. name</label>
+                <p id="license">{{ $project->image_original_name }}</p>
+
                 <p class="card-text"><small class="text-body-secondary">Last Update {{ $project->updated_at }} </small></p>
+
 
             </div>
 
-                <img src="{{ Vite::asset('resources/assets/img/no_image_available.jpeg')}}" class="card-img-bottom image-show" alt="No Image available">
+                <img
+                    src="{{$project->image_path ? asset('storage/' . $project->image_path) : Vite::asset('resources/assets/img/no_image_available.jpeg')}}"
+                    class="card-img-bottom image-show"
+                    alt="No Image available">
 
         </div>
 

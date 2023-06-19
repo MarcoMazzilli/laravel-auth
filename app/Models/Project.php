@@ -31,6 +31,8 @@ class Project extends Model
         'description',
         'slug',
         'status',
-        'license'
+        'license',
+        'image_path',
+        'image_original_name'
     ];
 }

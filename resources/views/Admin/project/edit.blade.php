@@ -16,7 +16,7 @@
         </ul>
     @endif
 
-    <form action="{{ route('admin.project.update' , $project)}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.project.update' , $project)}}" method="POST">
         @csrf
         @method('PUT')
 
@@ -32,23 +32,23 @@
         </div>
 
         <div class="mb-3">
-            <label for="thumb" class="form-label">Select a photo</label>
+            <label for="url" class="form-label">Url</label>
             <input
-                type="file"
-                class="form-control"
-                id="thumb"
-                name="thumb">
+                type="text"
+                class="form-control @error('url') is-invalid @enderror"
+                id="url"
+                name="url"
+                placeholder="Insert project's url"
+                value="{{old('url', $project->url)}}">
         </div>
 
         <div class="mb-3">
-            <label for="thumb" class="form-label">Path image</label>
+            <label for="image_path" class="form-label">Path image</label>
             <input
-                type="text"
+                type="file"
                 class="form-control"
-                id="thumb"
-                name="thumb"
-                placeholder="Insert project's thumb"
-                value="{{old('thumb', $project->thumb )}}">
+                id="image_path"
+                name="image_path">
         </div>
 
         <div class="mb-3 d-flex flex-column">
