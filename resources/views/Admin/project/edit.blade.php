@@ -32,14 +32,12 @@
         </div>
 
         <div class="mb-3">
-            <label for="url" class="form-label">Url</label>
+            <label for="thumb" class="form-label">Select a photo</label>
             <input
-                type="text"
-                class="form-control @error('url') is-invalid @enderror"
-                id="url"
-                name="url"
-                placeholder="Insert project's url"
-                value="{{old('url', $project->url)}}">
+                type="file"
+                class="form-control"
+                id="thumb"
+                name="thumb">
         </div>
 
         <div class="mb-3">

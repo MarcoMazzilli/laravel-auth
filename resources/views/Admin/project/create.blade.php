@@ -40,14 +40,12 @@
             </div>
 
             <div class="mb-3">
-                <label for="thumb" class="form-label">Path image</label>
+                <label for="thumb" class="form-label">Select a photo</label>
                 <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="thumb"
-                    name="thumb"
-                    placeholder="Insert project's thumb"
-                    value="{{old('thumb')}}">
+                    name="thumb">
             </div>
 
             <div class="mb-3 d-flex flex-column">
